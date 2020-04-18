@@ -1,0 +1,32 @@
+.pointer {
+    cursor: pointer;
+}
+
+.card-div {
+    height: 100%;
+}
+
+.example-card {
+    min-width: 350px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-container > * {
+    width: 100%;
+}
+
+.header {
+    padding-bottom: 10px;
+}
+
+.content {
+    align-items: inherit !important;
+}
+
+.image-input {
+    outline-style: none;
+}

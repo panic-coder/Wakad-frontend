@@ -1,0 +1,11 @@
+<div class="user-details-div" fxLayout="row" fxLayoutAlign="center start">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title><span>{{details.firstName}}</span>&nbsp;<span>{{details.lastName}}</span></mat-card-title>
+            <mat-card-subtitle>{{details.email}}</mat-card-subtitle>
+            <mat-card-subtitle>{{details.mobileNumber}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="details.image">
+        </mat-card>
+</div>

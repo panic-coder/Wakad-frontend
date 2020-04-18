@@ -1,0 +1,62 @@
+<div class="card-div" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="example-card">
+      <mat-card-header fxLayout="column" fxLayoutAlign="center center" class="header">
+        <p>Update Form</p>
+      </mat-card-header>
+  
+      <mat-card-content fxLayout="column" fxLayoutAlign="center center" class="content">
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Enter first name"
+            [formControl]="firstName"
+          />
+          <mat-error *ngIf="firstName.invalid">{{
+            getFirstNameErrorMessage()
+          }}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Enter last name"
+            [formControl]="lastName"
+          />
+          <mat-error *ngIf="lastName.invalid">{{
+            getLastNameErrorMessage()
+          }}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Enter email"
+            [formControl]="email"
+          />
+          <mat-error *ngIf="email.invalid">{{
+            getEmailErrorMessage()
+          }}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Enter mobile number"
+            [formControl]="mobileNumber"
+          />
+          <mat-error *ngIf="mobileNumber.invalid">{{
+            getMobileNumberErrorMessage()
+          }}</mat-error>
+        </mat-form-field>
+          <input
+          placeholder="Select an image" 
+          #fileInput type="file" (change)="onFileSelected($event)" class="pointer image-input" style="display: none;" />
+          <label for="fileInput" (click)="fileInput.click()"><span>{{imageName}}</span>&nbsp;&nbsp;<span class="pointer click-image">Click to select new image</span></label>
+      </mat-card-content>
+  
+      <mat-card-actions
+        fxLayout="row"
+        fxLayoutAlign="center center"
+      >
+        <button mat-raised-button (click)="update()">Update</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
